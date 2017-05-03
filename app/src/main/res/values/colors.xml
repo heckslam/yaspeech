@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorCurrentStateBkg">#5730469F</color>
+    <color name="ripple_dark">@color/mid_grey</color>
+    <color name="mid_grey">#40808080</color>
+    <color name="background_light">#fafafa</color> <!-- grey 50 -->
+    <color name="designer_news_link_highlight">#b303a9f4</color>
+    <color name="text_primary_dark">#de000000</color> <!-- 87% -->
+    <color name="background_save_dialog">#12000000</color> <!-- 50% -->
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:onClick="dismiss">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_large"
+        android:layout_marginEnd="@dimen/spacing_large"
+        android:paddingStart="@dimen/padding_normal"
+        android:paddingTop="@dimen/padding_dialog"
+        android:paddingEnd="@dimen/padding_dialog"
+        android:paddingBottom="@dimen/padding_normal"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:elevation="@dimen/z_fab"
+        android:background="@drawable/dialog_background"
+        android:clickable="true"
+        android:transitionName="@string/transition_designer_news_login">
+
+        <haosdev.com.yaspeech.ui.widget.BaselineGridTextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:layout_marginBottom="@dimen/dialog_title_spacing"
+            android:text="@string/save_dialog_title"
+            style="@style/DialogTitle" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username_float_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_micro"
+            app:hintTextAppearance="@style/TextAppearance.FloatLabelHint">
+
+            <AutoCompleteTextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/save_dialog_field_title"
+                android:inputType="textEmailAddress"
+                android:textColorHighlight="@color/designer_news_link_highlight"
+                android:selectAllOnFocus="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/lectorName_float_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_micro"
+            app:hintTextAppearance="@style/TextAppearance.FloatLabelHint">
+
+            <EditText
+                android:id="@+id/lectorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/save_dialog_field_author"
+                android:inputType="textEmailAddress"
+                android:textColorHighlight="@color/designer_news_link_highlight"
+                android:selectAllOnFocus="true" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <FrameLayout
+            android:id="@+id/actions_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_normal">
+
+            <Button
+                android:id="@+id/dismiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/save_dialog_dismiss_btn"
+                android:textColor="?android:colorAccent"
+                android:onClick="dismiss"
+                style="?android:borderlessButtonStyle" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:enabled="false"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:text="@string/save_dialog_save_btn"
+                android:background="@drawable/dialog_save_btn"
+                android:textAppearance="@style/TextAppearance.DarkButton"
+                android:onClick="doSave" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
